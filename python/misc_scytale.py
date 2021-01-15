@@ -40,7 +40,7 @@ def encode(text, step):
     return output
     
 def decode(text, step):
-    """Decode a cipher text using the step"""
+    """Decode a cypher text using the step"""
 
     output = ''
     # pass count is identical to step
@@ -48,6 +48,8 @@ def decode(text, step):
         output += text[i::step]
     # .rstrip() to remove any padded chars
     return output.rstrip()
+
+# Test 1 - example from wikipedia
     
 step = 4
 raw_text = "I am hurt very badly help"
@@ -59,6 +61,8 @@ print(f"Code: {code}") # Code: Iryyatbhmvaehedlurlp
 
 decoded = decode(code, step)
 print(f"Decoded: {decoded}") # Decoded: Iamhurtverybadlyhelp
+
+# Test 2 - example with variable step and uneven division
 
 step = 3
 raw_text = "I am hurt very badly please send help as soon as possible, thanks very much"
