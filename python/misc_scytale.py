@@ -15,7 +15,8 @@ ref: https://en.wikipedia.org/wiki/Scytale
 """
 
 def encode(text, step):
-    '''Transpose the text using the step'''
+    """Transpose the text using the step"""
+
     cleaned_text = text.replace(" ", "") # clean whitespace first
     length = len(cleaned_text)
     passes = length // step
@@ -39,7 +40,7 @@ def encode(text, step):
     return output
     
 def decode(text, step):
-    '''Decode a cipher text using the step'''
+    """Decode a cipher text using the step"""
 
     output = ''
     # pass count is identical to step
