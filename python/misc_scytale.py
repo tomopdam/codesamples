@@ -25,8 +25,7 @@ def encode(text, step):
     if remainder:
         # pad the string until the next clean division of length / step
         # as uneven division corrupts the transposition
-        times_to_pad = step * (passes+1) - length
-        for n in range(times_to_pad):
+        for n in range(remainder):
             cleaned_text += " "
         # text length has increased due to rounding up; passes must too
         passes += 1
